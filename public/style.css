@@ -1,46 +1,176 @@
+/* ================== */
+/* Estilo general */
+/* ================== */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
-  color: #222;
-  background-color: #fff;
+  color: #ffffff; /* Texto blanco para contrastar con fondo oscuro */
+  background: linear-gradient(135deg, #000000, #001f3f, #0074D9); /* Degradado negro -> azul */
   text-align: center;
-  line-height: 1.4em;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
+/* ================== */
+/* Barra superior (navbar) */
+/* ================== */
+
+.navbar {
+  background: linear-gradient(90deg, #000000, #001f3f, #0074D9);
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 116, 217, 0.6);
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* ================== */
+/* Contenido principal */
+/* ================== */
+
 main {
-  padding: 0;
+  padding: 20px;
   margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================== */
+/* Títulos */
+/* ================== */
+
+h1, h2, h3 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
 }
 
 h3 {
   margin-top: 30px;
+  font-size: 1.5em;
 }
 
+/* ================== */
+/* Listas de historias de usuario */
+/* ================== */
 
+.user-stories {
+  list-style: none;
+  padding: 0;
+}
 
 .user-stories li {
-  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5em;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
 }
+
+.user-stories li:hover {
+  transform: scale(1.03);
+}
+
+/* ================== */
+/* Enlaces */
+/* ================== */
 
 a {
-  color: #2574a9;
+  color: #7fdfff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+a:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #0074D9;
+}
+
+/* ================== */
+/* Formulario */
+/* ================== */
+
 form {
-  margin: 10px auto;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 30px;
   max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 6px 16px rgba(0, 116, 217, 0.5);
 }
 
 label {
-  margin-right: 10px;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-input {
-  padding: 5px;
+input[type='text'],
+input[type='submit'] {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
 input[type='text'] {
-  width: 220px;
+  width: 90%;
+  max-width: 400px;
   text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+input[type='text']:focus {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+input[type='submit'] {
+  background-color: #0074D9;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input[type='submit']:hover {
+  background-color: #005fbb;
 }
