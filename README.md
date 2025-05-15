@@ -7,6 +7,7 @@ Este proyecto es una API de acortador de URLs construida con Node.js y Express, 
 - Redirige a la URL original usando un endpoint GET.
 - Valida que la URL sea real y tenga un dominio válido usando DNS.
 - Respuestas JSON claras para errores y resultados.
+- Código modular: las rutas y la lógica principal están en `myApp.js`, y el servidor en `index.js`.
 
 ## Instalación
 
@@ -45,7 +46,8 @@ Este proyecto es una API de acortador de URLs construida con Node.js y Express, 
 
 ## Estructura del proyecto
 ```
-index.js
+index.js           # Servidor principal (configuración y arranque)
+myApp.js           # Lógica de rutas y validación
 package.json
 README.md
 sample.env
@@ -54,12 +56,13 @@ public/
 views/
   index.html
 assets/
-  screenshot.png
+  microserviceprojecturlshortener.png
 ```
 
 ## Notas
 - Este proyecto usa una base de datos en memoria, por lo que los datos se pierden al reiniciar el servidor.
 - Solo se aceptan URLs válidas y accesibles por DNS.
+- La lógica de rutas y validación está separada en `myApp.js` para mejor organización y escalabilidad.
 
 ---
 
